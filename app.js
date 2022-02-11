@@ -41,4 +41,7 @@ function init() {
   wheel1 = [null],
   wheel2 = [null],
   wheel3 = [null],
+  winningSpin = null
+  
+  render()
 }

@@ -1,3 +1,17 @@
 body {
-  background-color: blueviolet;
+  background-color: lightpink;
+  text-align: center;
+
 }
+
+.machine {
+  background-color: antiquewhite;
+  font-family: arial;
+  font-size: 24px;
+  margin: 25px;
+  width: 200px;
+  height: 350px;
+  outline: dashed 1px black;
+  display: inline-block;
+}
+
