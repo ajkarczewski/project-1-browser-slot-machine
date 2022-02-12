@@ -4,14 +4,19 @@ body {
 
 }
 
-.machine {
-  background-color: antiquewhite;
-  font-family: arial;
-  font-size: 24px;
-  margin: 25px;
-  width: 200px;
-  height: 350px;
-  outline: dashed 1px black;
-  display: inline-block;
+.container {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  width: 550px;
+  height: 300px;
+  justify-content: space-evenly;
+  
 }
 
+.inner {
+  width: 150px;
+  height: 200px;
+  border: 5px dashed black;
+  
+}
