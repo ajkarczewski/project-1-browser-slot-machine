@@ -54,3 +54,9 @@ let wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
 console.log(wheel1)
 console.log(wheel2)
 console.log(wheel3)
+
+
+  if (wheel1 === wheel2 && wheel2 === wheel3) {
+    console.log('Jackpot!')
+  } else {
+    console.log('Sorry, try again')}
