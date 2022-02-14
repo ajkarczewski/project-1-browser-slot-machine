@@ -45,16 +45,16 @@ spinButton.addEventListener('click', spin)
 
 // }
 
-function spin() {
-
-wheel1 = [Math.floor(Math.random() * wheel.length)]
-
-
-wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
-
-wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
-
+function spin(wheel) {
+  wheel1 = Math.floor(Math.random() * wheel.length)
 }
+
+
+
+// wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
+
+// wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
+// }
 
 function showSpin () {
   machine.innerHTML = (`${wheel1}, ${wheel2}, ${wheel3}`)

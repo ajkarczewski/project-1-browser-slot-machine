@@ -30,9 +30,13 @@ body {
   height: 300px;
   margin: auto;
 } */
-
-h3 {
-  font-size: 20px, black;
+div {
+  height: 200px;
+  width: 400px;
+  background-color: antiquewhite;
+}
+p {
+  font-size: 200px, black;
 }
 /* .wheel {
   border: 5px solid black;
