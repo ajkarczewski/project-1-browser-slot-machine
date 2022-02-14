@@ -15,64 +15,36 @@ html {
 body {
   background-color: lightpink;
   text-align: center;
-  align-items: center;
-  display: flex;
-  align-items: center;
-
 }
 
-/* .container {
+.container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: whitesmoke;
-  width: 550px;
-  height: 300px;
+  width: 800px;
+  height: 600px;
   margin: auto;
-} */
-div {
-  height: 200px;
-  width: 400px;
-  background-color: antiquewhite;
-}
-p {
-  font-size: 200px, black;
-}
-/* .wheel {
-  border: 5px solid black;
-  width: 25%;
-  height: 50%;
-}
-
-.inner {
-  border: 5px dashed black;
-  text-align: center;
-  width: 25px;
-  height: 50px;
-} */
-
-/* .container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  background-color: aqua;
-  width: 550px;
-  height: 300px;
-  justify-content: space-evenly;
-
 }
 
 .wheel {
-  display: grid;
   border: 5px solid black;
   width: 25%;
   height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inner {
-  width: 25px;
-  height: 50px;
   border: 5px dashed black;
-  text-align: center;
-  vertical-align: middle;
-} */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+.buttons {
+  padding: 20px;
+}
