@@ -8,6 +8,10 @@
 
 /*-------------------------------- Variables --------------------------------*/
 let wheel = ["cherry", "grapes", "bananas"]
+let wheel1
+let wheel2
+let wheel3
+let jackPot
 // let winningSpin
 
 /*------------------------ Cached Element References ------------------------*/
@@ -27,21 +31,44 @@ spinButton.addEventListener('click', spin)
 
 
 /*-------------------------------- Functions --------------------------------*/
-function spin() {
+init()
+
+function init() {
+
+jackPot = null
+
+render()
+
+}
+
+function render() {
+
+}
+
+function spin(wheel) {
 
 let wheel1 = wheel[Math.floor(Math.random() * wheel.length)]
+
 let wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
 let wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
 
-console.log(wheel1)
-console.log(wheel2)
-console.log(wheel3)
-}
+
+jackPot = checkJackPot()
+
+
+function checkJackPot() {
 
   if (wheel1 === wheel2 && wheel2 === wheel3) {
-    message ('Jackpot!')
+    message.innerText = `Jackpot!`
   } else {
-    message = ('Sorry, try again')}
+    message.innerText = `Sorry, try again!`
+  }
 
-    alert(message)
+}
+}
 
+// if (jackPot === false) {
+//   message.innerText = `Sorry, try again!`
+// } else if (jackPot === true) {
+//   message.innerText = `Jackpot!`
+// }
