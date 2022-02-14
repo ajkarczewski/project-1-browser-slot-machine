@@ -31,28 +31,34 @@ spinButton.addEventListener('click', spin)
 
 
 /*-------------------------------- Functions --------------------------------*/
-init()
+// init()
 
-function init() {
+// function init() {
 
-jackPot = null
+// jackPot = null
 
-render()
+// render()
+
+// }
+
+// function render() {
+
+// }
+
+function spin() {
+
+wheel1 = [Math.floor(Math.random() * wheel.length)]
+
+
+wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
+
+wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
 
 }
 
-function render() {
-
+function showSpin () {
+  machine.innerHTML = (`${wheel1}, ${wheel2}, ${wheel3}`)
 }
-
-function spin(wheel) {
-
-let wheel1 = wheel[Math.floor(Math.random() * wheel.length)]
-
-let wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
-let wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
-
-
 jackPot = checkJackPot()
 
 
@@ -65,7 +71,7 @@ function checkJackPot() {
   }
 
 }
-}
+
 
 // if (jackPot === false) {
 //   message.innerText = `Sorry, try again!`

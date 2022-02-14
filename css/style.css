@@ -21,7 +21,7 @@ body {
 
 }
 
-.container {
+/* .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,9 +29,12 @@ body {
   width: 550px;
   height: 300px;
   margin: auto;
-}
+} */
 
-.wheel {
+h3 {
+  font-size: 20px, black;
+}
+/* .wheel {
   border: 5px solid black;
   width: 25%;
   height: 50%;
@@ -42,7 +45,7 @@ body {
   text-align: center;
   width: 25px;
   height: 50px;
-}
+} */
 
 /* .container {
   display: flex;
