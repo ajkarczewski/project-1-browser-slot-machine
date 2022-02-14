@@ -15,10 +15,36 @@ html {
 body {
   background-color: lightpink;
   text-align: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
 
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  width: 550px;
+  height: 300px;
+  margin: auto;
+}
+
+.wheel {
+  border: 5px solid black;
+  width: 25%;
+  height: 50%;
+}
+
+.inner {
+  border: 5px dashed black;
+  text-align: center;
+  width: 25px;
+  height: 50px;
+}
+
+/* .container {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -31,7 +57,6 @@ body {
 
 .wheel {
   display: grid;
-  grid-template-columns: minmax(3, 10vmin);
   border: 5px solid black;
   width: 25%;
   height: 50%;
@@ -43,9 +68,4 @@ body {
   border: 5px dashed black;
   text-align: center;
   vertical-align: middle;
-}
-
-
-html {
-  box-sizing: border-box
-}
+} */
