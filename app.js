@@ -1,13 +1,13 @@
 /*-------------------------------- Constants --------------------------------*/
 // const winningCombos = [
-//   [1, 1, 1],
-//   [2, 2, 2],
-//   [3, 3, 3],
+//   ['🍇', '🍇', '🍇'],
+//   ['🍒', '🍒', '🍒'],
+//   ['🍌', '🍌', '🍌'],
 // ]
 
 
 /*-------------------------------- Variables --------------------------------*/
-let inner = ["🍇", "🍒", "🍌"]
+let wheel = ['🍇', '🍒', '🍌']
 let wheel1
 let wheel2
 let wheel3
@@ -19,6 +19,9 @@ let jackPot
 const message = document.getElementById('message')
 const resetButton = document.getElementById('reset')
 const spinButton = document.getElementById('spin')
+const wheel1El = document.getElementById('wheel1')
+const wheel2El = document.getElementById('wheel2')
+const wheel3El= document.getElementById('wheel3')
 
 
 
@@ -35,16 +38,22 @@ init()
 
 function init() {
 
-
+  wheel1 = ['']
+  wheel2 = ['']
+  wheel3 = ['']
+  
 
   jackPot = null
-
 
   render()
 }
 
 function render() {
   message.innerText = `Welcome, take your spin!`
+
+  wheel1El.innerText = `🍇`
+  wheel2El.innerText = `🍇`
+  wheel3El.innerText = `🍇`
 
 }  
 // function spin(wheel) {
