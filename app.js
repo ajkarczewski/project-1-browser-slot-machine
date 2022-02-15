@@ -38,10 +38,6 @@ init()
 
 function init() {
 
-  wheel1 = ['']
-  wheel2 = ['']
-  wheel3 = ['']
-  
 
   jackPot = null
 
@@ -56,35 +52,26 @@ function render() {
   wheel3El.innerText = `🍇`
 
 }  
-// function spin(wheel) {
-//   return wheel[Math.floor(Math.random() * wheel.length)]
-// }
 
-// spin(wheel1)
-// spin(wheel2)
-// spin(wheel3)
+function spin() {
+  wheel1Spin = wheel[Math.floor(Math.random() * wheel.length)];
+  wheel2Spin = wheel[Math.floor(Math.random() * wheel.length)];
+  wheel3Spin = wheel[Math.floor(Math.random() * wheel.length)];
 
-// console.log(wheel1)
-// console.log(wheel2)
-// console.log(wheel3)
+  wheel1El.innerText = wheel1Spin
+  wheel2El.innerText = wheel2Spin
+  wheel3El.innerText = wheel3Spin
+}
 
 
-// jackPot = checkJackPot()
-
+//jackPot = checkJackPot()
 
 // function checkJackPot() {
 
 //   if (wheel1 === wheel2 && wheel2 === wheel3) {
-//     message.innerText = `Jackpot!`
-//   } else {
-//     message.innerText = `Sorry, try again!`
+//      message.innerText = `Jackpot!`
+//     } else {
+//      message.innerText = `Sorry, try again!`
 //   }
 
-// }
-
-
-// if (jackPot === false) {
-//   message.innerText = `Sorry, try again!`
-// } else if (jackPot === true) {
-//   message.innerText = `Jackpot!`
-//
+//   }
