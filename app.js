@@ -7,23 +7,23 @@
 
 
 /*-------------------------------- Variables --------------------------------*/
-let wheel = ["cherry", "grapes", "bananas"]
+let inner = ["🍇", "🍒", "🍌"]
 let wheel1
 let wheel2
 let wheel3
 let jackPot
+
 // let winningSpin
 
 /*------------------------ Cached Element References ------------------------*/
-// const message = document.querySelector('#message')
-// const resetButton = document.getElementById('reset')
-// const wheel = document.querySelectorAll('wheel')
+const message = document.getElementById('message')
+const resetButton = document.getElementById('reset')
 const spinButton = document.getElementById('spin')
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-// resestButton.addEventListener('click', init)
+resetButton.addEventListener('click', init)
 spinButton.addEventListener('click', spin)
 // bet1Button.addEventListener('click',)
 // betMaxButton.addEventListener('click',)
@@ -31,50 +31,51 @@ spinButton.addEventListener('click', spin)
 
 
 /*-------------------------------- Functions --------------------------------*/
-// init()
+init()
 
-// function init() {
+function init() {
 
-// jackPot = null
 
-// render()
 
-// }
+  jackPot = null
 
-// function render() {
 
-// }
-
-function spin(wheel) {
-  wheel1 = Math.floor(Math.random() * wheel.length)
+  render()
 }
 
+function render() {
+  message.innerText = `Welcome, take your spin!`
 
-
-// wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
-
-// wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
+}  
+// function spin(wheel) {
+//   return wheel[Math.floor(Math.random() * wheel.length)]
 // }
 
-function showSpin () {
-  machine.innerHTML = (`${wheel1}, ${wheel2}, ${wheel3}`)
-}
-jackPot = checkJackPot()
+// spin(wheel1)
+// spin(wheel2)
+// spin(wheel3)
+
+// console.log(wheel1)
+// console.log(wheel2)
+// console.log(wheel3)
 
 
-function checkJackPot() {
+// jackPot = checkJackPot()
 
-  if (wheel1 === wheel2 && wheel2 === wheel3) {
-    message.innerText = `Jackpot!`
-  } else {
-    message.innerText = `Sorry, try again!`
-  }
 
-}
+// function checkJackPot() {
+
+//   if (wheel1 === wheel2 && wheel2 === wheel3) {
+//     message.innerText = `Jackpot!`
+//   } else {
+//     message.innerText = `Sorry, try again!`
+//   }
+
+// }
 
 
 // if (jackPot === false) {
 //   message.innerText = `Sorry, try again!`
 // } else if (jackPot === true) {
 //   message.innerText = `Jackpot!`
-// }
+//

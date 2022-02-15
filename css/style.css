@@ -13,7 +13,7 @@ html {
 
 
 body {
-  background-color: lightpink;
+  background-color: lightsteelblue;
   text-align: center;
 }
 
@@ -43,6 +43,7 @@ body {
   justify-content: center;
   width: 50%;
   height: 50%;
+  font-size: 50px;
 }
 
 .buttons {
