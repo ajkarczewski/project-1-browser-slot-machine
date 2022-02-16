@@ -38,7 +38,6 @@ init()
 
 function init() {
 
-
   jackPot = null
 
   render()
@@ -54,6 +53,7 @@ function render() {
 }  
 
 function spin() {
+
   wheel1Spin = wheel[Math.floor(Math.random() * wheel.length)];
   wheel2Spin = wheel[Math.floor(Math.random() * wheel.length)];
   wheel3Spin = wheel[Math.floor(Math.random() * wheel.length)];
@@ -61,17 +61,12 @@ function spin() {
   wheel1El.innerText = wheel1Spin
   wheel2El.innerText = wheel2Spin
   wheel3El.innerText = wheel3Spin
+
 }
 
+// jackPot = checkJackPot()
 
-//jackPot = checkJackPot()
 
 // function checkJackPot() {
-
-//   if (wheel1 === wheel2 && wheel2 === wheel3) {
-//      message.innerText = `Jackpot!`
-//     } else {
-//      message.innerText = `Sorry, try again!`
-//   }
-
-//   }
+//   if (wheel1Spin === wheel2Spin && wheel2Spin === wheel3Spin)
+// }
