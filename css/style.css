@@ -16,6 +16,35 @@ body {
   background-color: lightsteelblue;
   text-align: center;
 }
+#machine-top {
+  font-family: 'Monoton', cursive;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: whitesmoke;
+  width: 400px;
+  position: relative;
+  margin-bottom: -10px;
+  display: inline-block;
+  margin-top: 80px;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+
+}
+
+h1 {
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+#machine {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+}
 
 .container {
   display: flex;
@@ -26,9 +55,15 @@ body {
   height: 600px;
   margin: auto;
 }
+/* .display {
+  background-color: #99b2f1;
+  height: 50px;
+  width: 400px;
+  
+} */
 
 .wheel {
-  border: 5px solid black;
+  border: 5px solid #1d66e6;
   width: 25%;
   height: 50%;
   display: flex;
@@ -37,12 +72,12 @@ body {
 }
 
 .inner {
-  border: 5px dashed black;
+  border: 20px solid #99b2f1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
   font-size: 50px;
   animation: heartBeat;
   animation-duration: 2s;

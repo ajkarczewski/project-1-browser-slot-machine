@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const wheel = ['a', 'b', 'c']
+const wheel = ['🍇', '🍌', '🍒']
 
 
 /*-------------------------------- Variables --------------------------------*/
@@ -14,15 +14,17 @@ const resetButton = document.getElementById('reset')
 const spinButton = document.getElementById('spin')
 const wheel1El = document.getElementById('wheel1')
 const wheel2El = document.getElementById('wheel2')
-const wheel3El= document.getElementById('wheel3')
+const wheel3El = document.getElementById('wheel3')
+const credit = document.getElementById('credit')
+const bet = document.getElementById('bet')
+const winnings = document.getElementById('winnings')
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 resetButton.addEventListener('click', init)
 spinButton.addEventListener('click', spin)
-// bet1Button.addEventListener('click',)
-// betMaxButton.addEventListener('click',)
+
 
 
 
@@ -39,9 +41,9 @@ function init() {
 function render() {
   message.innerText = `Welcome, take your spin!`
 
-  wheel1El.innerText = 'a'
-  wheel2El.innerText = 'a'
-  wheel3El.innerText = 'a'
+  wheel1El.innerText = '🍇'
+  wheel2El.innerText = '🍇'
+  wheel3El.innerText = '🍇'
 
   //jackPot = null
 
