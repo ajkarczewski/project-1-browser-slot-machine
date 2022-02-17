@@ -1,13 +1,8 @@
 /*-------------------------------- Constants --------------------------------*/
-// const winningCombos = [
-//   ['🍇', '🍇', '🍇'],
-//   ['🍒', '🍒', '🍒'],
-//   ['🍌', '🍌', '🍌'],
-// ]
+const wheel = ['🍇', '🍒', '🍌']
 
 
 /*-------------------------------- Variables --------------------------------*/
-let wheel = ['🍇', '🍒', '🍌']
 let wheel1
 let wheel2
 let wheel3
@@ -52,47 +47,36 @@ function render() {
 
 }  
 
-function spin() {
+function spin(wheel) {
 
-  wheel1 = wheel[Math.floor(Math.random() * wheel.length)];
-  wheel2 = wheel[Math.floor(Math.random() * wheel.length)];
-  wheel3 = wheel[Math.floor(Math.random() * wheel.length)];
+  wheel1Spin = Math.floor(Math.random() * wheel.length)
+    wheel1El.(wheel[wheel1Spin])
+  // wheel2Spin = Math.floor(Math.random() * wheel.fruits.length)
+  // wheel3Spin = Math.floor(Math.random() * wheel.fruits.length)
 
-  wheel1El.innerText = wheel1
-  wheel2El.innerText = wheel2
-  wheel3El.innerText = wheel3
+  // wheel1El.innerText = wheel1Spin
+  // wheel2El.innerText = wheel2Spin
+  // wheel3El.innerText = wheel3Spin
 
 }
 
 
-jackPot = checkJackPot()
+// jackPot = checkJackPot()
 
-function checkJackPot() {
-  if (wheel1 === wheel2 && wheel2 === wheel3) { return true 
-  } else {
-    return false
-  }
-}
-// ^^ tried switching out names to wheelEl or WheelSpin still didn't work
+// function checkJackPot() {
+//   if (wheel1 === wheel2 && wheel2 === wheel3) { return true 
+//   } else {
+//     return false
+//   } 
+// }
 
-// use winning combos instead?
+// if (jackPot === true) {
+//   message.innerText = `JACKPOT!!!`
+// } else if (jackPot === false) {
+//   message.innerText = `Sorry, try again`
+// }
 
-//include option for null?
-
-console.log(jackPot)
-console.log(jackPot)
-console.log(jackPot)
-console.log(jackPot)
-console.log(wheel1)
-// ^ the deferred DOM Node could not be resolved to a valid node
-// jackPot will ONLY set to true
-
-if (jackPot === true) {
-  message.innerText = `JACKPOT!!!`
-} else if (jackPot === false) {
-  message.innerText = `Sorry, try again`
-}
-  // } else if (jackPot === null) {
+// } else if (jackPot === null) {
 //   message.innerText = `Welcome, take your Spin`
 // }
 
