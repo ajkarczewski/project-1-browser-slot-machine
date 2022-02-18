@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const wheel = ['🍇', '🍌', '🍒']
+const wheel = ['💿', '🪐', '✨']
 
 
 /*-------------------------------- Variables --------------------------------*/
@@ -33,24 +33,21 @@ init()
 
 function init() {
 
-  //jackPot = null
 
   render()
 }
 
 function render() {
-  message.innerText = `Welcome, take your spin!`
+  message.innerText = `take your spin!`
 
-  wheel1El.innerText = '🍇'
-  wheel2El.innerText = '🍇'
-  wheel3El.innerText = '🍇'
+  wheel1El.innerText = '🪐'
+  wheel2El.innerText = '🪐'
+  wheel3El.innerText = '🪐'
 
-  //jackPot = null
 
 }  
 
 function spin() {
-
   wheel1 = wheel[Math.floor(Math.random() * wheel.length)];
   wheel2 = wheel[Math.floor(Math.random() * wheel.length)];
   wheel3 = wheel[Math.floor(Math.random() * wheel.length)];

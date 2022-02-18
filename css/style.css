@@ -11,26 +11,21 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
-  background-color: lightsteelblue;
+  background-image: url("http://www.fun-lover.com/clipart/backs/Sky/mddksky.gif");
   text-align: center;
 }
+
+
 #machine-top {
-  font-family: 'Monoton', cursive;
   font-size: larger;
   display: flex;
   align-items: center;
   margin: auto;
-  background-color: whitesmoke;
   width: 400px;
   position: relative;
-  margin-bottom: -10px;
   display: inline-block;
-  margin-top: 80px;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
-
+  margin-top: 30px;
 }
 
 h1 {
@@ -39,31 +34,29 @@ h1 {
 
 h2 {
   margin-top: 0px;
+  color: #ace926;
+  font-size: 40px;
+  text-shadow: 1px 1px 5px black;
 }
 
-#machine {
-  border-top-left-radius: 30%;
-  border-top-right-radius: 30%;
+#credit {
+  border: 3px dashed red;
+  width: 40px;
+  height: 20px;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: whitesmoke;
-  width: 800px;
-  height: 600px;
+  width: 700px;
+  height: 500px;
   margin: auto;
 }
-/* .display {
-  background-color: #99b2f1;
-  height: 50px;
-  width: 400px;
-  
-} */
 
 .wheel {
-  border: 5px solid #1d66e6;
+  border: 10px #e926ac;
+  border-style:groove;
   width: 25%;
   height: 50%;
   display: flex;
@@ -72,20 +65,26 @@ h2 {
 }
 
 .inner {
-  border: 20px solid #99b2f1;
+  border: 20px #27ace9;
+  border-style: groove;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
   height: 90%;
   font-size: 50px;
-  animation: heartBeat;
+  animation: fadeInDown;
   animation-duration: 2s;
-  /* animation: fadeInDown, heartBeat;
-  animation-duration: 2s */
 }
-/*  heartBeat on jackPot fadeinDown on spin*/
 
-.buttons {
-  padding: 20px;
+#reset {
+  background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-pp-006.gif");
+  font-size: x-large;
+  font-style: oblique;
+}
+
+#spin {
+  background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-blue-017.gif");
+  font-size: x-large;
+  font-style: oblique;
 }
