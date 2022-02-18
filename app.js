@@ -33,7 +33,7 @@ function init() {
 }
 
 function render() {
-    message.textContent = `Take your spin!`
+    message.textContent = `Press spin to bet!`
 
     wheel1El.innerText = '🪐'
     wheel2El.innerText = '🪐'
@@ -63,7 +63,6 @@ function spin() {
     payTokens()
 
     checkJackPot()
-
 
 }
 
