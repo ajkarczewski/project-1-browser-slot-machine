@@ -1,33 +1,39 @@
-# Slot Machine Simulator 🎰
+# Slot Machine 1.0 💿
 
-Welcome to my first General Assembly project! Slot Machine Simulator is an in browser game that simulates a traditional casino slot machine. Go ahead and take your spin! (link to game)
+Welcome to my first General Assembly project! Slot Machine 1.0 is an in browser slot machine game inspired by the endearing and clunky aesthetics of the early web. Follow this [link](https://ajkarczewski.github.io/project-1-browser-slot-machine/), play some slots, and pretend you're back in geocities.
 
 ## How it started... 📝
+![Imgur](https://i.imgur.com/Ulfdlok.png)
 
------
-
-picture of wireframe and initial notes
 
 -----
 
 ## How it's going 👩‍💻
 
------
 
-picture of 
-current game version
 
 -----
 
 ## Technologies Used 🛠
 
+JavaScript | HTML5 | CSS3
+
 ----
 
-## Icebox Items 🧊
+## Credits 🤜 🤛
 
-- I was hoping to include some of my own drawings into the design! While I ended up sketching some of those out, unfortunately because of time constraints they didn't make it into the current version
+
+
+- [Animate.style](https://animate.style/)
+   ➡ a great library for simple css animations
+- [fun-lover.com](https://www.fun-lover.com/) ➡ a rabbit hole of web 1.0 inspiration and resources
+
+----
+
+## Icebox Items 🧊 
+
 - Include animation where coins fall from the screen when a user hits jackpot
-- Implement more of the game features that were in the original wireframe (e.g. x and pay table buttons)
+- Implement more of the game features that were in the original wireframe
 - Make game design responsive for mobile users
 
 
