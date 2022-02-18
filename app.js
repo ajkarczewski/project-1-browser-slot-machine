@@ -1,16 +1,13 @@
 /*-------------------------------- Constants --------------------------------*/
 const wheel = ['💿', '🪐', '✨']
-//SOUNDS
-
 
 /*-------------------------------- Variables --------------------------------*/
 let wheel1
 let wheel2
 let wheel3
 let jackPot
-
-let credits
-let lostGame
+let gameOver
+let tokenValue
 
 /*------------------------ Cached Element References ------------------------*/
 const message = document.getElementById('message')
@@ -18,78 +15,91 @@ const message = document.getElementById('message')
 const resetButton = document.getElementById('reset')
 const spinButton = document.getElementById('spin')
 
-const displayCredits = document.getElementById('credits')
-//we're going to add and subtract from the starting number
+const displayTokens = document.getElementById('tokens')
 
 const wheel1El = document.getElementById('wheel1')
 const wheel2El = document.getElementById('wheel2')
 const wheel3El = document.getElementById('wheel3')
 
-
-
-
 /*----------------------------- Event Listeners -----------------------------*/
 resetButton.addEventListener('click', init)
 spinButton.addEventListener('click', spin)
-
-
-
-
 
 /*-------------------------------- Functions --------------------------------*/
 init()
 
 function init() {
-
-
-  render()
+    render()
 }
 
 function render() {
-  message.innerText = `take your spin!`
+    message.textContent = `Take your spin!`
 
-  wheel1El.innerText = '🪐'
-  wheel2El.innerText = '🪐'
-  wheel3El.innerText = '🪐'
+    wheel1El.innerText = '🪐'
+    wheel2El.innerText = '🪐'
+    wheel3El.innerText = '🪐'
 
-  credits = 50
+    jackPot = false
 
-  displayCredits.innerText = `${credits} TOKENS`
+    gameOver = false
 
-}  
+    tokenValue = 50
+
+    displayTokens.innerText = `${tokenValue} TOKENS`
+}
+
 
 function spin() {
-  wheel1 = wheel[Math.floor(Math.random() * wheel.length)];
-  wheel2 = wheel[Math.floor(Math.random() * wheel.length)];
-  wheel3 = wheel[Math.floor(Math.random() * wheel.length)];
+    wheel1 = wheel[Math.floor(Math.random() * wheel.length)]
+    wheel2 = wheel[Math.floor(Math.random() * wheel.length)]
+    wheel3 = wheel[Math.floor(Math.random() * wheel.length)]
 
-  console.log(wheel1, wheel2, wheel3)
-  wheel1El.innerText = wheel1
-  wheel2El.innerText = wheel2
-  wheel3El.innerText = wheel3
+    wheel1El.innerText = wheel1
+    wheel2El.innerText = wheel2
+    wheel3El.innerText = wheel3
 
-  payTokens()
+    payTokens()
 
-  checkJackPot()
+    checkJackPot()
+
+    checkLoser()
 }
 
 function payTokens() {
-  displayCredits.textContent = parseInt(displayCredits.textContent) - 10
+    tokenValue = displayTokens.textContent = parseInt(displayTokens.textContent) - 10
+
+    displayTokens.textContent = `${tokenValue} TOKENS`
 }
 
 
 function checkJackPot() {
-  if (wheel1 === wheel2 && wheel1 === wheel3 && wheel2 === wheel3) {
-    jackPot = true
-  }
-  checkWinner()
+    if (wheel1 === wheel2 && wheel1 === wheel3 && wheel2 === wheel3) {
+        jackPot = true
+    }
+    checkWinner()
+    addTokens()
 }
 
 function checkWinner() {
-console.log(jackPot)
-if (jackPot === true) {
-  message.innerText = `JACKPOT!!!`
-} else {
-  message.innerText = `Sorry, try again`
+    if (jackPot === true) {
+        message.textContent = `JACKPOT!!!`
+        confetti.start(1000)
+    } else {
+        message.textContent = `Sorry, try again`
+    }
 }
+
+function addTokens() {
+    if (jackPot === true) {
+        tokenValue = [displayTokens.textContent = parseInt(displayTokens.textContent) + 50]
+        displayTokens.innerText = `${tokenValue} TOKENS`
+    }
+}
+
+function checkLoser() {
+    if (tokenValue <= 0) {
+        gameOver = true
+        message.textContent = `Out of tokens! No spins left. reset game to try again...`
+        spinButton.setAttribute("hidden, true")
+    }
 }

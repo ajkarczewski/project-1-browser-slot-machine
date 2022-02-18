@@ -1,91 +1,92 @@
 html {
-  box-sizing: border-box
+    box-sizing: border-box
 }
 
+
 /* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
+
+*,
+
+/* All elements*/
+
+*::before,
+
+/* All ::before pseudo-elements */
+
+*::after {
+    /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
      but can be over-ridden as needed */
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  background-image: url("http://www.fun-lover.com/clipart/backs/Sky/mddksky.gif");
-  text-align: center;
+    background-image: url("http://www.fun-lover.com/clipart/backs/Space/BlackMultiColorStars.jpg");
+    text-align: center;
 }
 
-
-#machine-top {
-  font-size: larger;
-  display: flex;
-  align-items: center;
-  margin: auto;
-  width: 400px;
-  position: relative;
-  display: inline-block;
-  margin-top: 30px;
+#top {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
 }
 
 h1 {
-  margin-bottom: 0px;
+    margin-top: 0px;
+    color: #ace926;
+    font-size: 40px;
 }
 
-h2 {
-  margin-top: 0px;
-  color: #ace926;
-  font-size: 40px;
-  text-shadow: 1px 1px 5px black;
-}
-
-#credits {
-  border: 3px dashed red;
-  width: 40px;
-  height: 20px;
-  font-size: x-large;
+#tokens {
+    font-size: x-large;
+    color: white;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 700px;
-  height: 500px;
-  margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    height: 500px;
+    margin: auto;
 }
 
 .wheel {
-  border: 10px #e926ac;
-  border-style:groove;
-  width: 25%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border: 10px #e926ac;
+    border-style: groove;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner {
-  border: 20px #27ace9;
-  border-style: groove;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  height: 90%;
-  font-size: 50px;
-  animation: fadeInDown;
-  animation-duration: 2s;
+    border: 20px #27ace9;
+    border-style: groove;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    font-size: 50px;
+    animation: fadeInDown;
+    animation-duration: 2.5s;
 }
 
 #reset {
-  background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-pp-006.gif");
-  font-size: x-large;
-  font-style: oblique;
+    background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-pp-006.gif");
+    font-size: x-large;
+    font-style: oblique;
 }
 
 #spin {
-  background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-blue-017.gif");
-  font-size: x-large;
-  font-style: oblique;
+    background-image: url("http://www.fun-lover.com/clipart/webpage-buttons-blank/buttons-rect-blue-017.gif");
+    font-size: x-large;
+    font-style: oblique;
 }
