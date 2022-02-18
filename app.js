@@ -1,5 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 const wheel = ['💿', '🪐', '✨']
+//SOUNDS
 
 
 /*-------------------------------- Variables --------------------------------*/
@@ -8,22 +9,30 @@ let wheel2
 let wheel3
 let jackPot
 
+let credits
+let lostGame
+
 /*------------------------ Cached Element References ------------------------*/
 const message = document.getElementById('message')
+
 const resetButton = document.getElementById('reset')
 const spinButton = document.getElementById('spin')
+
+const displayCredits = document.getElementById('credits')
+//we're going to add and subtract from the starting number
+
 const wheel1El = document.getElementById('wheel1')
 const wheel2El = document.getElementById('wheel2')
 const wheel3El = document.getElementById('wheel3')
-const credit = document.getElementById('credit')
-const bet = document.getElementById('bet')
-const winnings = document.getElementById('winnings')
+
 
 
 
 /*----------------------------- Event Listeners -----------------------------*/
 resetButton.addEventListener('click', init)
+spinButton.addEventListener('click', payTokens)
 spinButton.addEventListener('click', spin)
+
 
 
 
@@ -44,6 +53,9 @@ function render() {
   wheel2El.innerText = '🪐'
   wheel3El.innerText = '🪐'
 
+  credits = 50
+
+  displayCredits.innerText = `${credits} TOKENS`
 
 }  
 
@@ -57,7 +69,14 @@ function spin() {
   wheel2El.innerText = wheel2
   wheel3El.innerText = wheel3
 
+  payTokens()
+
   checkJackPot()
+}
+
+function payTokens() {
+  // -10 credits from displayCredits
+  // show new value in displayCredits
 }
 
 
