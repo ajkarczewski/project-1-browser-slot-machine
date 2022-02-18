@@ -46,6 +46,8 @@ function render() {
     tokenValue = 50
 
     displayTokens.innerText = `${tokenValue} TOKENS`
+
+    spinButton.style.visibility = 'visible'
 }
 
 
@@ -62,7 +64,7 @@ function spin() {
 
     checkJackPot()
 
-    checkLoser()
+
 }
 
 function payTokens() {
@@ -87,6 +89,7 @@ function checkWinner() {
     } else {
         message.textContent = `Sorry, try again`
     }
+    checkLoser()
 }
 
 function addTokens() {
@@ -100,6 +103,6 @@ function checkLoser() {
     if (tokenValue <= 0) {
         gameOver = true
         message.textContent = `Out of tokens! No spins left. reset game to try again...`
-        spinButton.setAttribute("hidden, true")
+        spinButton.style.visibility = 'hidden'
     }
 }
