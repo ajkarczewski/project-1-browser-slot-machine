@@ -30,7 +30,6 @@ const wheel3El = document.getElementById('wheel3')
 
 /*----------------------------- Event Listeners -----------------------------*/
 resetButton.addEventListener('click', init)
-spinButton.addEventListener('click', payTokens)
 spinButton.addEventListener('click', spin)
 
 
@@ -75,8 +74,7 @@ function spin() {
 }
 
 function payTokens() {
-  // -10 credits from displayCredits
-  // show new value in displayCredits
+  displayCredits.textContent = parseInt(displayCredits.textContent) - 10
 }
 
 
