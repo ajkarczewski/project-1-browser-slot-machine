@@ -76,21 +76,16 @@ function payTokens() {
 function checkJackPot() {
     if (wheel1 === wheel2 && wheel1 === wheel3 && wheel2 === wheel3) {
         jackPot = true
-        // ^ strict equality did not work
     }
     checkWinner()
     addTokens()
-// add something here for the function to end?
 }
 
-// add something to if condition that resets jackpot to false?
+
 function checkWinner() {
     if (jackPot === true) {
         message.textContent = `JACKPOT!!!`
         confetti.start(1000)
-        jackPot = false
-        // ^^ added
-        // jackPot === false << made it so at jackPot out of token and reset button appears
     } else {
         message.textContent = `Sorry, try again`
     }
@@ -101,11 +96,14 @@ function addTokens() {
     if (jackPot === true) {
         tokenValue = [displayTokens.textContent = parseInt(displayTokens.textContent) + 50]
         displayTokens.innerText = `${tokenValue} TOKENS`
+        jackPot = false
+        // added, seems to fix bug with token count and jackpot ^
     }
 }
 
 function checkLoser() {
-    if (tokenValue <= 0) {
+    if (tokenValue <= 0 && jackPot === false) {
+        // added jackPot condition, try loose equality if doesn't work or add checkWinner to end of function
         gameOver = true
         message.textContent = `Out of tokens! No spins left. reset game to try again...`
         spinButton.style.visibility = 'hidden'
