@@ -97,13 +97,11 @@ function addTokens() {
         tokenValue = [displayTokens.textContent = parseInt(displayTokens.textContent) + 50]
         displayTokens.innerText = `${tokenValue} TOKENS`
         jackPot = false
-        // added, seems to fix bug with token count and jackpot ^
     }
 }
 
 function checkLoser() {
     if (tokenValue <= 0 && jackPot === false) {
-        // added jackPot condition, try loose equality if doesn't work or add checkWinner to end of function
         gameOver = true
         message.textContent = `Out of tokens! No spins left. reset game to try again...`
         spinButton.style.visibility = 'hidden'
