@@ -76,15 +76,21 @@ function payTokens() {
 function checkJackPot() {
     if (wheel1 === wheel2 && wheel1 === wheel3 && wheel2 === wheel3) {
         jackPot = true
+        // ^ strict equality did not work
     }
     checkWinner()
     addTokens()
+// add something here for the function to end?
 }
 
+// add something to if condition that resets jackpot to false?
 function checkWinner() {
     if (jackPot === true) {
         message.textContent = `JACKPOT!!!`
         confetti.start(1000)
+        jackPot = false
+        // ^^ added
+        // jackPot === false << made it so at jackPot out of token and reset button appears
     } else {
         message.textContent = `Sorry, try again`
     }
